@@ -8,7 +8,7 @@ const News = ({ newdata }) => {
          NewsIndia - Top Bussinessc Headlines
       </h1>
       <div className="flex flex-wrap justify-evenly mt-5">
-        {newdata.map((news, index) => (
+        {newdata&&newdata.map((news, index) => (
           <div
             key={index}
             className="m-5 p-4 sm:h-[500px] w-[100vw] sm:w-[400px] border bg-gray-100 rounded-xl shadow-lg hover:scale-105 flex flex-col"

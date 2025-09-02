@@ -5,11 +5,13 @@ import useNewApi from "./hooks/useNewApi";
 import News from "./pages/News";
 function App() {
   const [newstype, setNewstype] = useState("general");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  setTimeout(() => {
+    setLoading(false)
+  }, 2000);
   const handleSetType = (type) => {
     setNewstype(type);
     setLoading(true);
-    // stop loading after ~2s (simulate API fetch)
     setTimeout(() => setLoading(false), 2000);
   };
   const dataa = useNewApi(newstype);
