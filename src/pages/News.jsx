@@ -5,7 +5,7 @@ const News = ({ newdata }) => {
   return (
     <div className="bg-white">
       <h1 className="text-center text-3xl pt-5 ">
-         NewsIndia - Top Bussinessc Headlines
+         News - Top Bussinessc Headlines
       </h1>
       <div className="flex flex-wrap justify-evenly mt-5">
         {newdata&&newdata.map((news, index) => (
@@ -13,11 +13,11 @@ const News = ({ newdata }) => {
             key={index}
             className="m-5 p-4 sm:h-[500px] w-[100vw] sm:w-[400px] border bg-gray-100 rounded-xl shadow-lg hover:scale-105 flex flex-col"
           >
-           {news.urlToImage && (<img
+          <img
               className=" rounded-xl shadow-md w-[100vw] h-[200px] sm:w-[400px]"
-              src={(news.urlToImage)}
+              src={(news.urlToImage)?(news.urlToImage):"https://images.pexels.com/photos/935979/pexels-photo-935979.jpeg"}
               alt=""
-            />)}
+            />
             <div className=" py-3 flex flex-col justify-between flex-grow">
               <h3 className="font-bold m-1">{news.title}</h3>
               <p>{news.description}</p>
