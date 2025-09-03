@@ -1,12 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import loadingGif from "../assets/loadingg.gif";
-const News = ({ newdata }) => {
+const News = ({ newdata,newstype }) => {
   return (
     <div className="bg-white">
-      <h1 className="text-center text-3xl pt-5 ">
-         News - Top Bussinessc Headlines
-      </h1>
+      <h1 className="text-center text-3xl pt-5 ">News - Top {newstype} Headlines</h1>
       <div className="flex flex-wrap justify-evenly mt-5">
         {newdata&&newdata.map((news, index) => (
           <div
